@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>İletişim</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="https://web-tasarim.tr/i/logo.svg" alt="Logo" /></a>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Anasayfa</a></li>
+      <li><a href="hakkimizda.html">Hakkımızda</a></li>
+      <li><a href="yetenekler.html">Yetenekler</a></li>
+      <li><a href="portfolio.html">Portföy</a></li>
+      <li><a href="iletisim.html">İletişim</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section>
+  <h1>İletişim</h1>
+  <p>Bana ulaşmak için e-posta gönderebilirsiniz: <strong>yunus@example.com</strong></p>
+</section>
+<section id="iletisim" class="section">
+  <div class="container">
+    <h2 class="contact-title">İletişime Geç</h2>
+    <p class="contact-description">Bizimle iletişime geçmek için aşağıdaki formu doldurun, en kısa sürede size geri dönüş yapacağız.</p>
+
+    <form action="mail.php" method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="name">Ad:</label>
+        <input type="text" id="name" name="name" required placeholder="Adınızı girin">
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-posta:</label>
+        <input type="email" id="email" name="email" required placeholder="E-postanızı girin">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Mesaj:</label>
+        <textarea id="message" name="message" required placeholder="Mesajınızı yazın"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Gönder</button>
+    </form>
+
+    <div class="social-media">
+      <a href="https://t.me/yourtelegram" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" />
+        <span>Telegram</span>
+      </a>
+      <a href="https://wa.me/yourwhatsapp" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

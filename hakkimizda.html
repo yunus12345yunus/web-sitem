@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hakkımızda</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="https://web-tasarim.tr/i/logo.svg" alt="Logo" /></a>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Anasayfa</a></li>
+      <li><a href="hakkimizda.html">Hakkımızda</a></li>
+      <li><a href="yetenekler.html">Yetenekler</a></li>
+      <li><a href="portfolio.html">Portföy</a></li>
+      <li><a href="iletisim.html">İletişim</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="hakkimizda" class="section">
+  <div class="container">
+    <h2>Hakkımda</h2>
+    <p>Ben Yunus Şanlı, Web Tasarımcısı ve Geliştiricisiyim. Yıllar içinde birçok küçük, orta ve büyük ölçekli projeyi tamamladım. Her projede, kullanıcı deneyimi ve işlevselliği ön planda tutarak yenilikçi çözümler sundum.</p>
+    <h3>Deneyimlerim</h3>
+    <ul>
+      <li>3 yıl Frontend Developer olarak görev aldım.</li>
+      <li>2 yıl Full Stack Developer olarak çalıştım.</li>
+      <li>Çeşitli start-up'lar için Web Tasarımı ve UX/UI çözümleri sundum.</li>
+    </ul>
+
+    <div class="achievements">
+      <h3>Başarılarım</h3>
+      <p>Birçok başarılı projeye imza attım. İşte bazıları:</p>
+      <ul>
+        <li>Web Tasarım Ödülleri 2023 - En İyi Tasarım</li>
+        <li>Tech Conference 2022 - Ana Konuşmacı</li>
+        <li>Yerli E-ticaret Projelerinde Övgüler Aldım</li>
+      </ul>
+    </div>
+
+    <div class="experience">
+      <h3>Proje Deneyimlerim</h3>
+      <div class="project">
+        <h4>Proje 1: Modern Web Tasarımı</h4>
+        <p>Kurumsal firmalar için modern ve etkili web tasarımları.</p>
+      </div>
+      <div class="project">
+        <h4>Proje 2: E-ticaret Platformu</h4>
+        <p>Verimli ve kullanıcı dostu e-ticaret platformları tasarımı.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>

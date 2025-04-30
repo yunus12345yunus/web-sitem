@@ -1,0 +1,1433 @@
+/* Genel stil ayarları */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+h2, h3 {
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+}
+
+.navbar .logo img {
+  width: 150px;
+}
+
+.navbar .menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+  color: #00d1b2;
+}
+
+/* Mobil uyum */
+@media (max-width: 768px) {
+  .navbar .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 20px;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .navbar .nav-links li a {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+/* Hakkımda bölümü */
+#hakkimda {
+  background: #333;
+  color: white;
+  padding: 60px 20px;
+}
+
+#hakkimda .about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+#hakkimda .about img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+#hakkimda h2 {
+  font-size: 2rem;
+  color: #00d1b2;
+}
+
+/* Yetenekler Bölümü */
+#yetenekler {
+  background: #333;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#yetenekler h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #00d1b2;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.skill-card {
+  background: #444;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card h3 {
+  font-size: 1.8rem;
+  color: #00d1b2;
+  margin-bottom: 20px;
+}
+
+.skill-card p {
+  font-size: 1.1rem;
+  color: white;
+}
+
+.skill-card:focus {
+  outline: none;
+  border: 2px solid #00d1b2;
+}
+
+.skill-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Portföy bölümü */
+#portfolio {
+  background: #333;
+  color: white;
+  padding: 60px 20px;
+}
+
+#portfolio h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #00d1b2;
+  margin-bottom: 40px;
+}
+
+.card-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  background: #444;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin-top: 15px;
+  color: #fff;
+}
+
+.card p {
+  color: #ccc;
+}
+
+.card .btn {
+  display: inline-block;
+  background: #00d1b2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.card .btn:hover {
+  background: #00a89b;
+}
+
+/* İletişim Bölümü */
+#iletisim {
+  background: #333;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#iletisim h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #00d1b2;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  background: #444;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+form:hover {
+  transform: translateY(-10px);
+}
+
+form label {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #00d1b2;
+}
+
+form input, form textarea {
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  width: 100%;
+  background-color: #555;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+  outline: none;
+  border: 2px solid #00d1b2;
+  background-color: #333;
+}
+
+form button {
+  padding: 15px;
+  background: #00d1b2;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+}
+
+form button:hover {
+  background: #00a89b;
+  transform: scale(1.05);
+}
+
+/* Sosyal medya ikonları */
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.social-media a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.social-media a:hover {
+  transform: scale(1.1);
+  color: #00a89b;
+}
+
+.social-media img {
+  width: 35px;
+  height: 35px;
+}
+/* Ana Sayfa Bölümü */
+#anasayfa {
+  background: linear-gradient(135deg, #8B0000, #800000); /* Koyu kırmızı tonları */
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+#anasayfa::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(0, 0, 0, 0.2);
+  transform: rotate(45deg);
+  z-index: -1;
+  animation: wave 6s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(45deg) translateX(0);
+  }
+  50% {
+    transform: rotate(45deg) translateX(20px);
+  }
+  100% {
+    transform: rotate(45deg) translateX(0);
+  }
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  animation: fadeIn 2s ease-out;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+  animation: fadeIn 2.5s ease-out;
+}
+
+.hero-content .btn {
+  padding: 15px 40px;
+  background-color: #222; /* Koyu siyah tonları */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
+.hero-content .btn:hover {
+  background-color: #ff6347; /* Taze kırmızı tonlarında */
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Menü ve Navigasyon */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.9); /* Koyu arka plan */
+  width: 100%;
+  padding: 5px 0; /* Üst ve alt boşluğu daha da küçültüyoruz */
+  z-index: 1000;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6); /* Daha belirgin gölge */
+}
+
+.navbar .logo a img {
+  width: 60px; /* Logo boyutunu küçültüyoruz */
+  height: auto;
+  margin-left: 10px;
+}
+
+.navbar .menu-toggle {
+  display: none;
+  font-size: 24px; /* Menü simgesi daha küçük */
+  color: white;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.navbar .nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.navbar .nav-links li {
+  margin: 0 10px; /* Daha küçük aralık */
+  position: relative;
+}
+
+/* Menü Öğeleri */
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px; /* Menü yazısını küçültüyoruz */
+  font-weight: bold;
+  padding: 8px 20px; /* Daha küçük iç boşluk */
+  border-radius: 50px; /* Yuvarlak köşeler */
+  transition: all 0.3s ease-in-out; /* Yumuşak animasyon */
+  position: relative;
+  display: inline-block;
+}
+
+/* Hover Efekti: Büyüme ve Alt Çizgi */
+.navbar .nav-links a:hover {
+  color: #fff; /* Beyaz renk */
+  transform: scale(1.1); /* Daha küçük büyüme */
+  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.6); /* Altın sarısı gölge */
+  border-bottom: 4px solid #FFD700; /* Altın sarısı alt çizgi */
+  background-color: rgba(255, 215, 0, 0.2); /* Hafif altın sarısı arka plan rengi */
+  letter-spacing: 1px; /* Harf aralıkları açılır */
+}
+
+/* Active Durum: Tıklama Efekti - Altın Sarısı Yazı Rengi */
+.navbar .nav-links a:active {
+  background-color: rgba(255, 215, 0, 0.2); /* Altın sarısı arka plan */
+  color: #FFD700; /* Altın sarısı metin rengi */
+  transform: scale(1.05); /* Tıklanırken biraz küçülme */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Tıklama sırasında daha belirgin gölge */
+  border-bottom: 4px solid #FFD700; /* Altın sarısı alt çizgi */
+}
+
+/* Responsive Menü */
+@media (max-width: 768px) {
+  .navbar .menu-toggle {
+    display: block;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .navbar .nav-links li {
+    margin: 5px 0; /* Daha küçük aralık */
+  }
+
+  .navbar .nav-links a {
+    font-size: 18px; /* Menü yazısını biraz daha küçük yapalım */
+    padding: 8px 18px;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .nav-links a:hover {
+    transform: scale(1.08); /* Mobilde hoverda öğe büyür */
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.6); /* Altın sarısı gölge */
+    border-bottom: 4px solid #FFD700; /* Altın sarısı alt çizgi */
+    background-color: rgba(255, 215, 0, 0.3); /* Altın sarısı arka plan rengi */
+  }
+}
+
+
+/* Responsive Menü */
+@media (max-width: 768px) {
+  .navbar .menu-toggle {
+    display: block;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .navbar .nav-links li {
+    margin: 10px 0;
+  }
+
+  .navbar .nav-links a {
+    font-size: 22px;
+    padding: 12px 20px;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .nav-links a:hover {
+    transform: scale(1.1); /* Mobilde hoverda öğe büyür */
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.6); /* Altın sarısı gölge */
+    border-bottom: 4px solid #FFD700; /* Altın sarısı alt çizgi */
+    background-color: rgba(255, 215, 0, 0.3); /* Altın sarısı arka plan rengi */
+  }
+}
+
+/* Responsive Menü */
+@media (max-width: 768px) {
+  .navbar .menu-toggle {
+    display: block;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .navbar .nav-links li {
+    margin: 10px 0;
+  }
+
+  .navbar .nav-links a {
+    font-size: 22px;
+    padding: 12px 20px;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .nav-links a:hover {
+    transform: scale(1.1); /* Mobilde hoverda öğe büyür */
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.6); /* Altın sarısı gölge */
+    border-bottom: 4px solid #FFD700; /* Altın sarısı alt çizgi */
+    background-color: rgba(255, 215, 0, 0.3); /* Altın sarısı arka plan rengi */
+  }
+}
+
+/* Responsive Menü */
+@media (max-width: 768px) {
+  .navbar .menu-toggle {
+    display: block;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .navbar .nav-links li {
+    margin: 10px 0;
+  }
+
+  .navbar .nav-links a {
+    font-size: 22px;
+    padding: 12px 20px;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .nav-links a:hover {
+    transform: scale(1.1); /* Mobilde hoverda öğe büyür */
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.6); /* Altın sarısı gölge */
+    border-bottom: 4px solid #FFD700; /* Altın sarısı alt çizgi */
+    background-color: rgba(255, 215, 0, 0.3); /* Altın sarısı arka plan rengi */
+  }
+}
+
+
+/* Responsive Menü */
+@media (max-width: 768px) {
+  .navbar .menu-toggle {
+    display: block;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .navbar .nav-links li {
+    margin: 10px 0;
+  }
+
+  .navbar .nav-links a {
+    font-size: 22px;
+    padding: 12px 20px;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .nav-links a:hover {
+    transform: scale(1.1); /* Mobilde hoverda öğe büyür */
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.6); /* Altın sarısı gölge */
+    border-bottom: 4px solid #FFD700; /* Altın sarısı alt çizgi */
+    background-color: rgba(255, 215, 0, 0.3); /* Altın sarısı arka plan rengi */
+  }
+}
+
+/* Responsive Menü */
+@media (max-width: 768px) {
+  .navbar .menu-toggle {
+    display: block;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .navbar .nav-links li {
+    margin: 10px 0;
+  }
+
+  .navbar .nav-links a {
+    font-size: 22px;
+    padding: 12px 20px;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .nav-links a:hover {
+    transform: scale(1.1); /* Mobilde hoverda öğe büyür */
+    box-shadow: 0 6px 15px rgba(255, 99, 71, 0.6); /* Gölge efekti */
+    border-bottom: 4px solid #ff6347; /* Alt çizgi efekti */
+    background-color: rgba(255, 99, 71, 0.3); /* Arka plan rengi biraz daha belirgin */
+  }
+}
+
+/* Responsive Menü */
+@media (max-width: 768px) {
+  .navbar .menu-toggle {
+    display: block;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .navbar .nav-links li {
+    margin: 5px 0;
+  }
+
+  .navbar .nav-links a {
+    font-size: 18px;
+    padding: 12px 20px;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .nav-links a:hover {
+    transform: scale(1.1); /* Mobilde hoverda öğe büyür */
+    box-shadow: 0 4px 12px rgba(255, 99, 71, 0.5); /* Gölge efekti */
+    border-bottom: 4px solid #ff6347; /* Alt çizgi efekti */
+  }
+}
+
+
+/* Responsive Menü */
+@media (max-width: 768px) {
+  .navbar .menu-toggle {
+    display: block;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    padding: 5px 0;
+    z-index: 2;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .navbar .nav-links li {
+    margin: 5px 0;
+  }
+
+  .navbar .nav-links a {
+    font-size: 18px;
+    padding: 12px 20px;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .navbar .nav-links a:hover {
+    transform: translateY(-10px); /* Mobilde hover etkisini daha da belirginleştirme */
+  }
+}
+
+
+/* Responsive Menü */
+@media (max-width: 768px) {
+  .navbar .menu-toggle {
+    display: block;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .navbar .nav-links li {
+    margin: 5px 0; /* Menü öğeleri arasındaki boşluğu daha da küçültme */
+  }
+
+  .navbar .nav-links a {
+    font-size: 16px; /* Mobilde font boyutunu küçük tutma */
+    padding: 8px 16px;
+    display: block;
+  }
+}
+
+
+/* Responsive Menü */
+@media (max-width: 768px) {
+  .navbar .menu-toggle {
+    display: block;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    padding: 5px 0; /* Yüksekliği daha da küçültme */
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .navbar .nav-links li {
+    margin: 5px 0; /* Menü öğeleri arasındaki boşluğu daha da küçültme */
+  }
+
+  .navbar .nav-links a {
+    font-size: 16px; /* Mobilde font boyutunu küçük tutma */
+    padding: 8px 16px;
+    display: block;
+  }
+}
+/* "Daha Fazla" Butonu */
+.btn-daha-fazla {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(255, 215, 0, 0.7); /* Altın sarısı arka plan */
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50px;
+  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.6);
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px;
+}
+
+.btn-daha-fazla:hover {
+  color: white;
+  background-color: rgba(255, 215, 0, 1); /* Hoverda daha parlak altın sarısı */
+  transform: scale(1.1); /* Hoverda buton biraz büyür */
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.8); /* Hoverda daha belirgin gölge */
+  border-bottom: 4px solid #FFD700; /* Hoverda altın sarısı alt çizgi */
+}
+
+.btn-daha-fazla:active {
+  color: #FFD700; /* Tıklandığında altın sarısı yazı rengi */
+  background-color: rgba(255, 215, 0, 0.8); /* Tıklandığında altın sarısı arka plan */
+  transform: scale(1.05); /* Tıklanırken biraz küçülme */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Tıklama sırasında daha belirgin gölge */
+  border-bottom: 4px solid #FFD700; /* Tıklanırken altın sarısı alt çizgi */
+}
+/* Geçiş Efekti Başlangıcı */
+body {
+  overflow-x: hidden; /* Sayfada sağa kaydırma çubuğunu gizler */
+}
+
+/* Sayfa İçeriği Animasyonu */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%); /* Sağdan başla */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* Başlangıç noktasına gelsin */
+    opacity: 1;
+  }
+}
+
+/* Kartlar ve Diğer İçerikler İçin Geçiş Efekti */
+.card, .section h2, .section p, .btn-daha-fazla {
+  animation: slideInRight 1s ease-out forwards;
+  opacity: 0;
+}
+
+/* Kartların sıralı geçiş efekti */
+.card:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+/* Başlıkların geçişi */
+.section h2 {
+  animation-delay: 0.4s;
+}
+
+.section p {
+  animation-delay: 0.6s;
+}
+
+/* "Daha Fazla" Butonunun Geçişi */
+.btn-daha-fazla {
+  animation-delay: 0.8s;
+}
+
+/* Hover Efekti - Kartlar */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Efekti - Buton */
+.btn-daha-fazla:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.8);
+  transition: all 0.3s ease-in-out;
+}
+/* "Detaylar" Butonları için */
+.card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffd700; /* Altın sarısı rengi */
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+/* "Detaylar" Butonları Hover Efekti */
+.card .btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.8);
+  background-color: #e6b800; /* Hoverda biraz daha koyu altın sarısı */
+  transition: all 0.3s ease;
+}
+/* Logo Stili */
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navbar .logo img {
+  width: 120px; /* Logo boyutu */
+  height: auto; /* Orantıyı korur */
+  transition: transform 0.3s ease;
+}
+
+/* Logo'ya Hover Efekti */
+.navbar .logo img:hover {
+  transform: scale(1.1); /* Hoverda logo biraz büyür */
+}
+/* Hoş geldiniz başlığının stilini büyütme */
+.welcome h1 {
+  font-size: 60px;  /* Burada yazı boyutunu büyütüyoruz */
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+/* Logo stilini özelleştirelim */
+.welcome-logo {
+  width: 100px; /* Logo boyutunu küçültüyoruz */
+  height: auto;
+  margin-bottom: 20px;
+  filter: grayscale(100%) brightness(0); /* Siyah yapmak için */
+  transition: transform 0.3s ease;
+}
+/* Hoş Geldiniz bölümüne animasyon ekliyoruz */
+.anasayfa {
+  opacity: 0; /* Başlangıçta saydam olacak */
+  transform: translateY(-50px); /* Sayfa üstten kayacak */
+  animation: slideInFromTop 1s ease-out forwards; /* 1 saniyelik animasyon ekliyoruz */
+}
+
+/* Animasyonun nasıl gerçekleşeceğini tanımlıyoruz */
+@keyframes slideInFromTop {
+  to {
+    opacity: 1; /* Görünür hale gelecek */
+    transform: translateY(0); /* Yavaşça normal yerine oturacak */
+  }
+}
+
+/* Hoş Geldiniz kısmı */
+.welcome {
+  opacity: 0; /* Başlangıçta saydam olacak */
+  transform: translateY(-100px); /* Başlangıçta yukarıdan kayacak */
+  animation: slideInFromTop 1.5s ease-out forwards; /* 1.5 saniyelik animasyon */
+}
+
+@keyframes renkKaydir {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.welcome-logo {
+  opacity: 0;
+  transform: translateY(-50px); /* Logo biraz daha yavaş gelsin */
+  animation: slideInFromTop 1s ease-out forwards;
+  animation-delay: 0.5s; /* Logo, yazıdan biraz daha geç görünsün */
+}
+
+h1 {
+  opacity: 0;
+  transform: translateY(-70px); /* Başlık biraz daha kayacak */
+  animation: slideInFromTop 1s ease-out forwards;
+  animation-delay: 0.2s; /* Başlık yazısından sonra */
+}
+
+p {
+  opacity: 0;
+  transform: translateY(-80px); /* Metin biraz daha kayacak */
+  animation: slideInFromTop 1s ease-out forwards;
+  animation-delay: 0.4s; /* Metin, başlıktan sonra */
+}
+/* Yetenekler bölümü */
+#yetenekler .skills {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Yetenek kartlarının başlangıç durumu */
+.skill-card {
+  opacity: 0; /* Başlangıçta saydam olacak */
+  transform: translateX(50px); /* Sağdan kayacak */
+  animation: slideInFromRight 1s ease-out forwards; /* 1 saniyelik animasyon */
+}
+
+/* Animasyonun nasıl gerçekleşeceğini tanımlıyoruz */
+@keyframes slideInFromRight {
+  to {
+    opacity: 1; /* Görünür hale gelecek */
+    transform: translateX(0); /* Yavaşça normal yerine oturacak */
+  }
+}
+
+/* Kartların sırayla görünmesini sağlamak için gecikme ekliyoruz */
+.skill-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.skill-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.skill-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+/* İletişim Başlığı */
+.contact-title {
+  text-align: center;
+  font-size: 3em;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-bottom: 5px solid #ffcc00; /* Altın sarısı çizgi */
+  padding-bottom: 15px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+}
+
+/* Açıklama Metni */
+.contact-description {
+  text-align: center;
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* İletişim Formu */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Form elemanları */
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  font-size: 1.1em;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  background: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ffcc00;
+  outline: none;
+}
+
+/* Gönder Butonu */
+.submit-btn {
+  padding: 15px 25px;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+  background-color: #ff9900;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Sosyal medya linkleri */
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.social-media a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+  font-size: 1.1em;
+}
+
+.social-media a:hover {
+  color: #ffcc00;
+}
+
+.social-media img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s ease;
+}
+
+.social-media a:hover img {
+  transform: scale(1.2);
+}
+
+/* Proje Detayı Başlık */
+.project-title {
+  text-align: center;
+  font-size: 2.5em;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-bottom: 4px solid #ffcc00; /* Altın sarısı çizgi */
+  padding-bottom: 15px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.hosgeldiniz {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-top: 20px;
+}
+/* Genel portföy kartları */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.card {
+  background: #1f1f1f;
+  color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  width: 300px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  margin: 15px 0 10px;
+}
+
+.card p {
+  padding: 0 20px 20px;
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+.card .btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.4s ease;
+}
+
+.card .btn:hover {
+  background: linear-gradient(90deg, #e52e71, #ff8a00);
+}
+
+/* Hover efekti */
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+/* Detay bölümleri */
+.section {
+  padding: 60px 20px;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.section p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto 0;
+  max-width: 600px;
+}
+
+.section ul li {
+  background: #f5f5f5;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #444;
+  transition: background 0.3s ease;
+}
+
+.section ul li:hover {
+  background: #e0e0e0;
+}
+.achievements {
+  margin-top: 30px;
+}
+
+.achievements ul {
+  list-style-type: square;
+  margin-left: 20px;
+}
+
+.achievements li {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.progress-bar {
+  background-color: #f0f0f0;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 5px;
+}
+.card-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  width: 200px;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: gray;
+}
+
+.card .btn {
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.card .btn:hover {
+  background-color: #0056b3;
+}
+.social-media {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.social-media a {
+  color: #e1306c;
+  font-size: 36px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  color: #ad1457;
+  transform: scale(1.2);
+}

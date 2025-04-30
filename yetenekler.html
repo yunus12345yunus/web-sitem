@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yetenekler</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="https://web-tasarim.tr/i/logo.svg" alt="Logo" /></a>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Anasayfa</a></li>
+      <li><a href="hakkimizda.html">Hakkımızda</a></li>
+      <li><a href="yetenekler.html">Yetenekler</a></li>
+      <li><a href="portfolio.html">Portföy</a></li>
+      <li><a href="iletisim.html">İletişim</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="yetenekler" class="section">
+  <div class="container">
+    <h2>Yeteneklerim</h2>
+    <div class="skills">
+      <div class="skill-card">
+        <h3>HTML & CSS</h3>
+        <div class="progress-bar">
+          <div class="progress" style="width: 90%;"></div>
+        </div>
+        <p>Web sayfalarının temel yapı taşları. %90 uzmanlık seviyesinde.</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>JavaScript</h3>
+        <div class="progress-bar">
+          <div class="progress" style="width: 80%;"></div>
+        </div>
+        <p>Dinamik ve etkileşimli web sayfaları oluşturma. %80 uzmanlık seviyesinde.</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>PHP & MySQL</h3>
+        <div class="progress-bar">
+          <div class="progress" style="width: 75%;"></div>
+        </div>
+        <p>Sunucu tarafı kodlama ve veritabanı yönetimi. %75 uzmanlık seviyesinde.</p>
+      </div>
+
+      <!-- Yeni yetenek -->
+      <div class="skill-card">
+        <h3>React & Vue.js</h3>
+        <div class="progress-bar">
+          <div class="progress" style="width: 70%;"></div>
+        </div>
+        <p>Modern frontend frameworkleriyle uygulama geliştirme. %70 uzmanlık seviyesinde.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
